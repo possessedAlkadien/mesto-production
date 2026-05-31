@@ -8,7 +8,7 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Mesto</title>
-    <script type="module" crossorigin src="./assets/index-CbWDNfs0.js"></script>
+    <script type="module" crossorigin src="./assets/index-CW5CW5Q2.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-D2z4Cjqv.css">
   </head>
   <body class="page">
@@ -56,7 +56,7 @@
                 placeholder="Имя"
                 maxlength="40"
                 minlength="2"
-                pattern="[а-яА-ЯёЁa-zA-Z-]"
+                pattern="^[a-zA-Zа-яА-ЯёЁ\s\-]+$"
                 required
               />
               <span class="popup__error" id="user-name-error"></span>
@@ -97,7 +97,7 @@
                 id="place-name"
                 class="popup__input popup__input_type_card-name"
                 placeholder="Название"
-                pattern="[а-яА-ЯёЁa-zA-Z-]"
+                pattern="^[a-zA-Zа-яА-ЯёЁ\s\-]+$"
                 minlength="2"
                 maxlength="30"
                 data-error-message="Может включать только латинские и кириллические буквы, знаки дефиса и пробелы"
@@ -110,6 +110,7 @@
                 type="url"
                 name="place-link"
                 id="place-link"
+                data-error-message="Введите URL"
                 class="popup__input popup__input_type_url"
                 placeholder="Ссылка на картинку"
                 required
@@ -160,6 +161,7 @@
                 type="url"
                 name="user-avatar"
                 id="user-avatar"
+                data-error-message="Введите URL"
                 class="popup__input popup__input_type_avatar"
                 placeholder="Ссылка на изображение"
                 required
@@ -180,10 +182,10 @@
       <div class="popup popup_type_info">
         <div class="popup__content popup__content_content_info">
           <button type="button" class="popup__close"></button>
-          <h3 class="popup__title"></h3>
+          <h3 class="popup__title">Статистика карточек</h3>
           <dl class="popup__info"></dl>
 
-          <h4 class="popup__text"></h4>
+          <h4 class="popup__text">Популярные карточки</h4>
           <ul class="popup__list"></ul>
         </div>
       </div>
